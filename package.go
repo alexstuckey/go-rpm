@@ -147,10 +147,10 @@ func (c *Package) Files() []FileInfo {
 	names := c.Header.GetTag(1117).StringSlice()
 	dirs := c.Header.GetTag(1118).StringSlice()
 	modes := c.Header.GetTag(1030).Int64Slice()
+	sizes := c.Header.GetTag(1028).Int64Slice()
 	if len(names) > 0 && len(sizes) == 0 {
 		sizes = c.Header.GetTag(5008).Int64Slice()
 	}
- sizes := c.Header.GetTag(1028).Int64Slice()
 	times := c.Header.GetTag(1034).Int64Slice()
 	flags := c.Header.GetTag(1037).Int64Slice()
 	owners := c.Header.GetTag(1039).StringSlice()
