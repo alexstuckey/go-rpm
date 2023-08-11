@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 )
 
-const r_MaxHeaderSize = 33554432
+const r_MaxHeaderSize = 134217728
 
 // A Header stores metadata about an rpm package.
 type Header struct {
